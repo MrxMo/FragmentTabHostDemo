@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/headerView"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#20BBCE"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="5dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"/>
+
+    </LinearLayout>
+
+    <com.mr_mo.fragmenttabhostdemo.widget.MDScrollView
+        android:id="@id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerView"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivIcon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@mipmap/company_home"/>
+
+            <LinearLayout
+                android:id="@+id/navBarView"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="#fff"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/menuTitleOne"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="1"
+                    android:background="@drawable/sl_tab_bar_item_title_bg"
+                    android:textColor="@drawable/sl_tab_bar_item_index_nav_bar_title"/>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#D5D6D7"/>
+
+                <TextView
+                    android:id="@+id/menuTitleTwo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="2"
+                    android:background="@drawable/sl_tab_bar_item_title_bg"
+                    android:textColor="@drawable/sl_tab_bar_item_index_nav_bar_title"/>
+            </LinearLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"/>
+
+        </LinearLayout>
+
+    </com.mr_mo.fragmenttabhostdemo.widget.MDScrollView>
+
+    <LinearLayout
+        android:id="@+id/PopupView"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/headerView"
+        android:background="#fff"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/menuTitleOnePopup"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="1"
+            android:background="@drawable/sl_tab_bar_item_title_bg"
+            android:textColor="@drawable/sl_tab_bar_item_index_nav_bar_title"/>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#D5D6D7"/>
+
+        <TextView
+            android:id="@+id/menuTitleTwoPopup"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="2"
+            android:background="@drawable/sl_tab_bar_item_title_bg"
+            android:textColor="@drawable/sl_tab_bar_item_index_nav_bar_title"/>
+    </LinearLayout>
+
+</RelativeLayout>
